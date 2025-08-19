@@ -2,12 +2,12 @@
 
 pub mod downloader;
 pub mod error;
-pub mod song;
 pub mod playlist;
+pub mod song;
 
 pub use downloader::Downloader;
-pub use song::{Song, SongMetadata};
 pub use playlist::Playlist;
+pub use song::{Song, SongMetadata};
 
 #[cfg(test)]
 mod tests {

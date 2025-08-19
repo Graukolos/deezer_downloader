@@ -54,7 +54,7 @@ impl Song {
         metadata: SongMetadata,
         downloader: &Downloader,
     ) -> anyhow::Result<Song> {
-        log::debug!("started download {}",metadata.id);
+        log::debug!("started download {}", metadata.id);
 
         let raw_data = downloader.dowload_raw_song_data(metadata.id).await?;
         let cover = downloader
@@ -66,7 +66,7 @@ impl Song {
             .await?
             .to_vec();
 
-        log::debug!("finished download {}",metadata.id);
+        log::debug!("finished download {}", metadata.id);
         Song::from_raw_data_and_metadata(raw_data, metadata, cover).await
     }
 
