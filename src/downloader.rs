@@ -129,6 +129,10 @@ impl Downloader {
                     "formats": [
                         {
                             "cipher": "BF_CBC_STRIPE",
+                            "format": "FLAC"
+                        },
+                        {
+                            "cipher": "BF_CBC_STRIPE",
                             "format": "MP3_320"
                         },
                         {
